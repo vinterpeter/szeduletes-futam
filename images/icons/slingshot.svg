@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Y alakú fa -->
+  <path d="M32 56 L32 30 M32 30 L20 12 M32 30 L44 12" fill="none" stroke="#8B4513" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Gumi -->
+  <path d="M20 12 Q32 24 44 12" fill="none" stroke="#E74C3C" stroke-width="3" stroke-linecap="round"/>
+  <!-- Bőr tartó -->
+  <ellipse cx="32" cy="20" rx="4" ry="3" fill="#A0522D"/>
+</svg>

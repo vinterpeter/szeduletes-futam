@@ -1,0 +1,17 @@
+# Generated images (keep only final versions in images/scenes/)
+generated_imgs/
+
+# macOS
+.DS_Store
+*.swp
+
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# Node (if any)
+node_modules/
+
+# Logs
+*.log

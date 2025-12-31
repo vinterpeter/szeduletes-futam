@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Szédületes Futam</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- 4 Tárcsa a sarkokban -->
+        <div class="wheel wheel-top-left" id="wheel-green">
+            <div class="wheel-label">Zöld</div>
+            <div class="wheel-value" id="wheel-green-value">-</div>
+        </div>
+
+        <div class="wheel wheel-top-right" id="wheel-yellow">
+            <div class="wheel-label">Sárga</div>
+            <div class="wheel-value" id="wheel-yellow-value">-</div>
+        </div>
+
+        <div class="wheel wheel-bottom-left" id="wheel-blue">
+            <div class="wheel-label">Kék</div>
+            <div class="wheel-value" id="wheel-blue-value">-</div>
+        </div>
+
+        <div class="wheel wheel-bottom-right" id="wheel-red">
+            <div class="wheel-label">Karakter</div>
+            <div class="wheel-value" id="wheel-red-value">-</div>
+        </div>
+
+        <!-- Fő tartalom -->
+        <div class="main-content">
+            <!-- Bal oldal: Történet -->
+            <div class="story-panel">
+                <div class="page-number" id="page-number">1. oldal</div>
+                <div class="story-content" id="story-content">
+                    <h2>A Szédületes Futam</h2>
+                    <p>Válassz egy karaktert a jobb oldalon, és induljon a kaland!</p>
+                </div>
+                <div class="character-info" id="character-info">
+                    <!-- Karakter info ide kerül -->
+                </div>
+            </div>
+
+            <!-- Jobb oldal: 3 Választás -->
+            <div class="choices-panel">
+                <div class="choice choice-1" id="choice-1" onclick="selectChoice(1)">
+                    <div class="choice-number">1</div>
+                    <div class="choice-content">
+                        <h3>Panka Tanka</h3>
+                        <p>A páncélozott tank</p>
+                    </div>
+                </div>
+
+                <div class="choice choice-2" id="choice-2" onclick="selectChoice(2)">
+                    <div class="choice-number">2</div>
+                    <div class="choice-content">
+                        <h3>Ro-Bi Jövő-Menő</h3>
+                        <p>A szemetes masinka</p>
+                    </div>
+                </div>
+
+                <div class="choice choice-3" id="choice-3" onclick="selectChoice(3)">
+                    <div class="choice-number">3</div>
+                    <div class="choice-content">
+                        <h3>Samu Vörös Villám</h3>
+                        <p>A vagány versenyautó</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Új játék / Folytatás modal -->
+    <div class="modal" id="start-modal" style="display: none;">
+        <div class="modal-content">
+            <h2>A Szédületes Futam</h2>
+            <p>Van mentett játékod. Mit szeretnél?</p>
+            <button onclick="continueGame()">Folytatás</button>
+            <button onclick="newGame()">Új játék</button>
+        </div>
+    </div>
+
+    <script src="js/gameState.js"></script>
+    <script src="js/pages.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

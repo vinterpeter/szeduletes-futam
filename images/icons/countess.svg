@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Haj -->
+  <ellipse cx="32" cy="28" rx="16" ry="14" fill="#4A3728"/>
+  <!-- Arc -->
+  <circle cx="32" cy="30" r="12" fill="#FDBF6F"/>
+  <!-- Korona -->
+  <path d="M20 20 L24 12 L28 18 L32 10 L36 18 L40 12 L44 20" fill="#FFD700" stroke="#DAA520" stroke-width="1"/>
+  <!-- Szemek -->
+  <circle cx="28" cy="28" r="2" fill="#333"/>
+  <circle cx="36" cy="28" r="2" fill="#333"/>
+  <!-- Mosoly -->
+  <path d="M28 34 Q32 38 36 34" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Ruha -->
+  <path d="M20 44 Q32 40 44 44 L46 58 L18 58 Z" fill="#9B59B6"/>
+  <!-- Nyaklánc -->
+  <circle cx="32" cy="44" r="3" fill="#FFD700"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Mászóhorog -->
+  <path d="M32 8 L32 28 M24 20 L32 28 L40 20" fill="none" stroke="#8B4513" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Kötél -->
+  <path d="M32 28 Q38 36 32 44 Q26 52 32 58" fill="none" stroke="#D2691E" stroke-width="3" stroke-linecap="round"/>
+  <path d="M30 28 Q36 36 30 44 Q24 52 30 58" fill="none" stroke="#CD853F" stroke-width="2" stroke-linecap="round"/>
+</svg>

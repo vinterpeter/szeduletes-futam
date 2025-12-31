@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Test -->
+  <ellipse cx="32" cy="38" rx="14" ry="16" fill="#F5DEB3"/>
+  <!-- Fej -->
+  <circle cx="32" cy="18" r="12" fill="#FFF"/>
+  <!-- Csőr -->
+  <path d="M32 22 L38 26 L32 28 Z" fill="#FFA500"/>
+  <!-- Szemek -->
+  <circle cx="28" cy="16" r="2" fill="#333"/>
+  <circle cx="36" cy="16" r="2" fill="#333"/>
+  <!-- Csokornyakkendő -->
+  <path d="M26 30 L32 34 L38 30 L32 38 Z" fill="#E74C3C"/>
+  <circle cx="32" cy="34" r="3" fill="#C0392B"/>
+  <!-- Szárnyak -->
+  <ellipse cx="18" cy="40" rx="6" ry="10" fill="#F5DEB3" stroke="#DDD" stroke-width="1"/>
+  <ellipse cx="46" cy="40" rx="6" ry="10" fill="#F5DEB3" stroke="#DDD" stroke-width="1"/>
+  <!-- Lábak -->
+  <path d="M28 54 L26 60 L30 58 M36 54 L38 60 L34 58" fill="none" stroke="#FFA500" stroke-width="2"/>
+</svg>

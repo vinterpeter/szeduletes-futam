@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Szárnyak -->
+  <ellipse cx="16" cy="32" rx="10" ry="16" fill="rgba(150,220,255,0.6)" stroke="#87CEEB" stroke-width="1"/>
+  <ellipse cx="48" cy="32" rx="10" ry="16" fill="rgba(150,220,255,0.6)" stroke="#87CEEB" stroke-width="1"/>
+  <!-- Test -->
+  <ellipse cx="32" cy="38" rx="8" ry="12" fill="#98FB98"/>
+  <!-- Fej -->
+  <circle cx="32" cy="22" r="10" fill="#FDBF6F"/>
+  <!-- Haj -->
+  <path d="M22 20 Q24 10 32 8 Q40 10 42 20" fill="#90EE90"/>
+  <!-- Szemek -->
+  <circle cx="28" cy="22" r="2" fill="#333"/>
+  <circle cx="36" cy="22" r="2" fill="#333"/>
+  <!-- Mosoly -->
+  <path d="M28 26 Q32 30 36 26" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- Varázspálca -->
+  <line x1="44" y1="36" x2="56" y2="24" stroke="#FFD700" stroke-width="2"/>
+  <path d="M56 24 L58 20 L54 22 L58 18 L52 22" fill="#FFD700"/>
+  <!-- Csillogás -->
+  <circle cx="14" cy="24" r="1.5" fill="#FFD700"/>
+  <circle cx="50" cy="40" r="1.5" fill="#FFD700"/>
+</svg>

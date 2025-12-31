@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Test -->
+  <ellipse cx="32" cy="32" rx="8" ry="10" fill="#2C3E50"/>
+  <!-- Bal szárny -->
+  <path d="M24 28 Q8 20 6 32 Q8 36 14 34 Q12 40 18 38 Q16 44 24 40 L24 32" fill="#34495E"/>
+  <!-- Jobb szárny -->
+  <path d="M40 28 Q56 20 58 32 Q56 36 50 34 Q52 40 46 38 Q48 44 40 40 L40 32" fill="#34495E"/>
+  <!-- Fülek -->
+  <path d="M26 24 L28 18 L30 24" fill="#2C3E50"/>
+  <path d="M34 24 L36 18 L38 24" fill="#2C3E50"/>
+  <!-- Szemek -->
+  <circle cx="28" cy="30" r="3" fill="#F1C40F"/>
+  <circle cx="36" cy="30" r="3" fill="#F1C40F"/>
+  <circle cx="28" cy="30" r="1.5" fill="#000"/>
+  <circle cx="36" cy="30" r="1.5" fill="#000"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Tank test -->
+  <rect x="8" y="32" width="48" height="20" rx="4" fill="#4CAF50"/>
+  <!-- Lövegtorony -->
+  <rect x="20" y="22" width="24" height="14" rx="3" fill="#388E3C"/>
+  <!-- Lövegcső -->
+  <rect x="44" y="26" width="16" height="6" rx="2" fill="#2E7D32"/>
+  <!-- Lánctalpak -->
+  <rect x="6" y="50" width="52" height="8" rx="4" fill="#333"/>
+  <circle cx="14" cy="54" r="4" fill="#555"/>
+  <circle cx="26" cy="54" r="4" fill="#555"/>
+  <circle cx="38" cy="54" r="4" fill="#555"/>
+  <circle cx="50" cy="54" r="4" fill="#555"/>
+  <!-- Sisak kukucskáló -->
+  <circle cx="32" cy="18" r="8" fill="#FDBF6F"/>
+  <!-- Szemek -->
+  <circle cx="29" cy="17" r="2" fill="#333"/>
+  <circle cx="35" cy="17" r="2" fill="#333"/>
+  <!-- Mosoly -->
+  <path d="M29 21 Q32 24 35 21" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- Sisak -->
+  <path d="M24 14 Q32 6 40 14" fill="none" stroke="#4CAF50" stroke-width="4" stroke-linecap="round"/>
+</svg>
