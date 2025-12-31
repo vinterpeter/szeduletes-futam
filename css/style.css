@@ -165,17 +165,7 @@ body {
 }
 
 .page-number {
-    font-size: 14px;
-    color: #fff;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    text-shadow:
-        1px 1px 0 #000,
-        -1px 1px 0 #000,
-        1px -1px 0 #000,
-        -1px -1px 0 #000,
-        2px 2px 4px rgba(0,0,0,0.8);
+    display: none;
 }
 
 .story-content {
@@ -219,8 +209,6 @@ body {
 
 .character-info {
     margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
     font-size: 14px;
     color: #fff;
     text-shadow:
