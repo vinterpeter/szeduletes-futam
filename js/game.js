@@ -591,17 +591,7 @@ function updateWheels(state) {
     });
 }
 
-/**
- * Tárcsa kattintás kezelése (forgatás)
- */
-document.querySelectorAll('.wheel').forEach(wheel => {
-    wheel.addEventListener('click', () => {
-        const color = wheel.id.replace('wheel-', '');
-        if (color !== 'red') {
-            GameState.rotateWheel(color);
-        }
-    });
-});
+/* Tárcsák csak megjelenítésre - nem kattinthatók */
 
 // Story panel kattintásra auto-play leállítása
 document.querySelector('.story-panel').addEventListener('click', (e) => {

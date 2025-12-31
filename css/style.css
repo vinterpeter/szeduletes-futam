@@ -21,26 +21,21 @@ body {
     overflow: hidden;
 }
 
-/* Tárcsák a sarkokban */
+/* Tárcsák a sarkokban - csak megjelenítés, nem kattintható */
 .wheel {
-    position: absolute;
-    width: 100px;
-    height: 100px;
+    position: fixed;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    z-index: 100;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.wheel:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    pointer-events: none;
+    opacity: 0.9;
 }
 
 .wheel-top-left {
@@ -102,26 +97,27 @@ body {
     opacity: 1;
 }
 
-/* Fő tartalom */
+/* Fő tartalom - teljes képernyő */
 .main-content {
     display: flex;
+    flex-direction: column;
     height: 100vh;
-    padding: 130px 140px;
+    padding: 0;
+    position: relative;
 }
 
-/* Bal oldal: Történet panel */
+/* Történet panel - teljes képernyő háttérképpel */
 .story-panel {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 30px;
-    margin-right: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 100px 120px 220px 120px;
     display: flex;
     flex-direction: column;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-    overflow: hidden;
+    backdrop-filter: blur(2px);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -137,11 +133,11 @@ body {
     bottom: 0;
     background: linear-gradient(
         to bottom,
-        rgba(26, 26, 46, 0.3) 0%,
-        rgba(26, 26, 46, 0.4) 100%
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.7) 100%
     );
     z-index: 1;
-    border-radius: 20px;
 }
 
 .story-panel > * {
@@ -222,32 +218,42 @@ body {
     font-size: 16px;
 }
 
-/* Jobb oldal: Választások panel */
+/* Választások panel - alsó overlay */
 .choices-panel {
-    width: 350px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
+    z-index: 150;
+    max-width: 1200px;
+    width: calc(100% - 200px);
+    justify-content: center;
 }
 
 .choice {
     flex: 1;
-    background: rgba(255, 255, 255, 0.08);
+    max-width: 350px;
+    background: rgba(20, 20, 40, 0.85);
     border-radius: 15px;
-    padding: 20px;
+    padding: 15px 20px;
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
     gap: 15px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .choice:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateX(-10px);
+    background: rgba(40, 40, 80, 0.95);
+    transform: translateY(-5px);
     border-color: #FFD700;
+    box-shadow: 0 8px 30px rgba(255, 215, 0, 0.3);
 }
 
 .choice.selected {
@@ -425,9 +431,9 @@ body {
 
 .choice.audio-playing {
     border: 3px solid #4CAF50 !important;
-    background: rgba(76, 175, 80, 0.15);
-    box-shadow: 0 0 15px rgba(76, 175, 80, 0.4);
-    transform: translateX(-10px);
+    background: rgba(76, 175, 80, 0.25);
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
+    transform: translateY(-5px) scale(1.02);
 }
 
 @keyframes borderGlow {
@@ -473,47 +479,69 @@ body {
 }
 
 /* Reszponzív */
-@media (max-width: 900px) {
-    .main-content {
-        flex-direction: column;
-        padding: 120px 20px 120px 20px;
-    }
-
-    .story-panel {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
+@media (max-width: 1100px) {
     .choices-panel {
-        width: 100%;
-        flex-direction: row;
+        flex-direction: column;
+        width: calc(100% - 40px);
+        bottom: 10px;
+        gap: 10px;
     }
 
     .choice {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px;
+        max-width: none;
     }
 
-    .choice:hover {
-        transform: translateY(-5px);
+    .story-panel {
+        padding: 80px 20px 280px 20px;
     }
+}
 
+@media (max-width: 768px) {
     .wheel {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
 
     .wheel-label {
-        font-size: 10px;
-    }
-
-    .wheel-value {
-        font-size: 14px;
+        font-size: 9px;
     }
 
     .wheel-icon {
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .story-panel {
+        padding: 70px 15px 320px 15px;
+    }
+
+    .story-content h2 {
+        font-size: 22px;
+    }
+
+    .story-content {
+        font-size: 16px;
+    }
+
+    .choices-panel {
+        bottom: 5px;
+    }
+
+    .choice {
+        padding: 12px 15px;
+    }
+
+    .choice-number {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .choice-content h3 {
+        font-size: 14px;
+    }
+
+    .choice-content p {
+        font-size: 11px;
     }
 }
