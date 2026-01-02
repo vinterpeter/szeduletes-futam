@@ -117,6 +117,273 @@ const AudioFiles = {
     'page_2_3_3': {
         text: 'audio/page_2_3_3_text.mp3',
         choices: ['audio/page_2_3_3_choice_1.mp3']
+    },
+    // === PAGE 3 ===
+    'page_3': {
+        text: 'audio/page_3_text.mp3',
+        choices: [
+            'audio/page_3_choice_1.mp3',
+            'audio/page_3_choice_2.mp3',
+            'audio/page_3_choice_3.mp3'
+        ]
+    },
+    'page_3_1_1': {
+        text: 'audio/page_3_1_1_text.mp3',
+        choices: [
+            'audio/page_3_1_1_choice_1.mp3',
+            'audio/page_3_1_1_choice_2.mp3'
+        ]
+    },
+    'page_3_1_2': {
+        text: 'audio/page_3_1_2_text.mp3',
+        choices: ['audio/page_3_1_2_choice_1.mp3']
+    },
+    'page_3_1_3': {
+        text: 'audio/page_3_1_3_text.mp3',
+        choices: ['audio/page_3_1_3_choice_1.mp3']
+    },
+    'page_3_2_1': {
+        text: 'audio/page_3_2_1_text.mp3',
+        choices: [
+            'audio/page_3_2_1_choice_1.mp3',
+            'audio/page_3_2_1_choice_2.mp3'
+        ]
+    },
+    'page_3_2_2': {
+        text: 'audio/page_3_2_2_text.mp3',
+        choices: ['audio/page_3_2_2_choice_1.mp3']
+    },
+    'page_3_2_3': {
+        text: 'audio/page_3_2_3_text.mp3',
+        choices: ['audio/page_3_2_3_choice_1.mp3']
+    },
+    'page_3_3_1': {
+        text: 'audio/page_3_3_1_text.mp3',
+        choices: [
+            'audio/page_3_3_1_choice_1.mp3',
+            'audio/page_3_3_1_choice_2.mp3'
+        ]
+    },
+    'page_3_3_2': {
+        text: 'audio/page_3_3_2_text.mp3',
+        choices: ['audio/page_3_3_2_choice_1.mp3']
+    },
+    'page_3_3_3': {
+        text: 'audio/page_3_3_3_text.mp3',
+        choices: ['audio/page_3_3_3_choice_1.mp3']
+    },
+    // === PAGE 4 ===
+    'page_4': {
+        text: 'audio/page_4_text.mp3',
+        choices: [
+            'audio/page_4_choice_1.mp3',
+            'audio/page_4_choice_2.mp3',
+            'audio/page_4_choice_3.mp3'
+        ]
+    },
+    'page_4_1_1': {
+        text: 'audio/page_4_1_1_text.mp3',
+        choices: [
+            'audio/page_4_1_1_choice_1.mp3',
+            'audio/page_4_1_1_choice_2.mp3'
+        ]
+    },
+    'page_4_1_2': {
+        text: 'audio/page_4_1_2_text.mp3',
+        choices: ['audio/page_4_1_2_choice_1.mp3']
+    },
+    'page_4_1_3': {
+        text: 'audio/page_4_1_3_text.mp3',
+        choices: ['audio/page_4_1_3_choice_1.mp3']
+    },
+    'page_4_2_1': {
+        text: 'audio/page_4_2_1_text.mp3',
+        choices: [
+            'audio/page_4_2_1_choice_1.mp3',
+            'audio/page_4_2_1_choice_2.mp3'
+        ]
+    },
+    'page_4_2_2': {
+        text: 'audio/page_4_2_2_text.mp3',
+        choices: ['audio/page_4_2_2_choice_1.mp3']
+    },
+    'page_4_2_3': {
+        text: 'audio/page_4_2_3_text.mp3',
+        choices: ['audio/page_4_2_3_choice_1.mp3']
+    },
+    'page_4_3_1': {
+        text: 'audio/page_4_3_1_text.mp3',
+        choices: [
+            'audio/page_4_3_1_choice_1.mp3',
+            'audio/page_4_3_1_choice_2.mp3'
+        ]
+    },
+    'page_4_3_2': {
+        text: 'audio/page_4_3_2_text.mp3',
+        choices: ['audio/page_4_3_2_choice_1.mp3']
+    },
+    'page_4_3_3': {
+        text: 'audio/page_4_3_3_text.mp3',
+        choices: ['audio/page_4_3_3_choice_1.mp3']
+    },
+    // === PAGE 5 ===
+    'page_5': {
+        text: 'audio/page_5_text.mp3',
+        choices: [
+            'audio/page_5_choice_1.mp3',
+            'audio/page_5_choice_2.mp3',
+            'audio/page_5_choice_3.mp3'
+        ]
+    },
+    'page_5_1_1': {
+        text: 'audio/page_5_1_1_text.mp3',
+        choices: [
+            'audio/page_5_1_1_choice_1.mp3',
+            'audio/page_5_1_1_choice_2.mp3'
+        ]
+    },
+    'page_5_1_2': {
+        text: 'audio/page_5_1_2_text.mp3',
+        choices: ['audio/page_5_1_2_choice_1.mp3']
+    },
+    'page_5_1_3': {
+        text: 'audio/page_5_1_3_text.mp3',
+        choices: ['audio/page_5_1_3_choice_1.mp3']
+    },
+    'page_5_2_1': {
+        text: 'audio/page_5_2_1_text.mp3',
+        choices: [
+            'audio/page_5_2_1_choice_1.mp3',
+            'audio/page_5_2_1_choice_2.mp3'
+        ]
+    },
+    'page_5_2_2': {
+        text: 'audio/page_5_2_2_text.mp3',
+        choices: ['audio/page_5_2_2_choice_1.mp3']
+    },
+    'page_5_2_3': {
+        text: 'audio/page_5_2_3_text.mp3',
+        choices: ['audio/page_5_2_3_choice_1.mp3']
+    },
+    'page_5_3_1': {
+        text: 'audio/page_5_3_1_text.mp3',
+        choices: [
+            'audio/page_5_3_1_choice_1.mp3',
+            'audio/page_5_3_1_choice_2.mp3'
+        ]
+    },
+    'page_5_3_2': {
+        text: 'audio/page_5_3_2_text.mp3',
+        choices: ['audio/page_5_3_2_choice_1.mp3']
+    },
+    'page_5_3_3': {
+        text: 'audio/page_5_3_3_text.mp3',
+        choices: ['audio/page_5_3_3_choice_1.mp3']
+    },
+    // === PAGE 6 ===
+    'page_6': {
+        text: 'audio/page_6_text.mp3',
+        choices: [
+            'audio/page_6_choice_1.mp3',
+            'audio/page_6_choice_2.mp3',
+            'audio/page_6_choice_3.mp3'
+        ]
+    },
+    'page_6_1_1': {
+        text: 'audio/page_6_1_1_text.mp3',
+        choices: [
+            'audio/page_6_1_1_choice_1.mp3',
+            'audio/page_6_1_1_choice_2.mp3'
+        ]
+    },
+    'page_6_1_2': {
+        text: 'audio/page_6_1_2_text.mp3',
+        choices: ['audio/page_6_1_2_choice_1.mp3']
+    },
+    'page_6_1_3': {
+        text: 'audio/page_6_1_3_text.mp3',
+        choices: ['audio/page_6_1_3_choice_1.mp3']
+    },
+    'page_6_2_1': {
+        text: 'audio/page_6_2_1_text.mp3',
+        choices: [
+            'audio/page_6_2_1_choice_1.mp3',
+            'audio/page_6_2_1_choice_2.mp3'
+        ]
+    },
+    'page_6_2_2': {
+        text: 'audio/page_6_2_2_text.mp3',
+        choices: ['audio/page_6_2_2_choice_1.mp3']
+    },
+    'page_6_2_3': {
+        text: 'audio/page_6_2_3_text.mp3',
+        choices: ['audio/page_6_2_3_choice_1.mp3']
+    },
+    'page_6_3_1': {
+        text: 'audio/page_6_3_1_text.mp3',
+        choices: [
+            'audio/page_6_3_1_choice_1.mp3',
+            'audio/page_6_3_1_choice_2.mp3'
+        ]
+    },
+    'page_6_3_2': {
+        text: 'audio/page_6_3_2_text.mp3',
+        choices: ['audio/page_6_3_2_choice_1.mp3']
+    },
+    'page_6_3_3': {
+        text: 'audio/page_6_3_3_text.mp3',
+        choices: ['audio/page_6_3_3_choice_1.mp3']
+    },
+    // === PAGE 7 ===
+    'page_7': {
+        text: 'audio/page_7_text.mp3',
+        choices: [
+            'audio/page_7_choice_1.mp3',
+            'audio/page_7_choice_2.mp3',
+            'audio/page_7_choice_3.mp3'
+        ]
+    },
+    'page_7_1_1': {
+        text: 'audio/page_7_1_1_text.mp3',
+        choices: [
+            'audio/page_7_1_1_choice_1.mp3',
+            'audio/page_7_1_1_choice_2.mp3'
+        ]
+    },
+    'page_7_1_2': {
+        text: 'audio/page_7_1_2_text.mp3',
+        choices: []
+    },
+    'page_7_1_3': {
+        text: 'audio/page_7_1_3_text.mp3',
+        choices: []
+    },
+    'page_7_2_1': {
+        text: 'audio/page_7_2_1_text.mp3',
+        choices: [
+            'audio/page_7_2_1_choice_1.mp3',
+            'audio/page_7_2_1_choice_2.mp3'
+        ]
+    },
+    'page_7_2_2': {
+        text: 'audio/page_7_2_2_text.mp3',
+        choices: []
+    },
+    'page_7_2_3': {
+        text: 'audio/page_7_2_3_text.mp3',
+        choices: []
+    },
+    'page_7_3_1': {
+        text: 'audio/page_7_3_1_text.mp3',
+        choices: ['audio/page_7_3_1_choice_1.mp3']
+    },
+    'page_7_3_2': {
+        text: 'audio/page_7_3_2_text.mp3',
+        choices: ['audio/page_7_3_2_choice_1.mp3']
+    },
+    'page_7_3_3': {
+        text: 'audio/page_7_3_3_text.mp3',
+        choices: []
     }
 };
 
@@ -335,8 +602,13 @@ const elements = {
         blue: document.getElementById('wheel-blue-value'),
         red: document.getElementById('wheel-red-value')
     },
-    startModal: document.getElementById('start-modal')
+    startModal: document.getElementById('start-modal'),
+    endModal: document.getElementById('end-modal'),
+    restartModal: document.getElementById('restart-modal')
 };
+
+// Játék vége időzítő
+let endGameTimeout = null;
 
 /**
  * Játék inicializálása
@@ -377,11 +649,77 @@ function continueGame() {
 }
 
 /**
+ * Játék újrakezdése (végső modalból)
+ */
+function restartGame() {
+    elements.endModal.style.display = 'none';
+    if (endGameTimeout) {
+        clearTimeout(endGameTimeout);
+        endGameTimeout = null;
+    }
+    newGame();
+}
+
+/**
+ * Végső modal megjelenítése
+ */
+function showEndModal() {
+    elements.endModal.style.display = 'flex';
+}
+
+/**
+ * Újrakezdés modal megjelenítése
+ */
+function showRestartModal() {
+    elements.restartModal.style.display = 'flex';
+}
+
+/**
+ * Újrakezdés megerősítése
+ */
+function confirmRestart() {
+    elements.restartModal.style.display = 'none';
+    restartGame();
+}
+
+/**
+ * Újrakezdés megszakítása
+ */
+function cancelRestart() {
+    elements.restartModal.style.display = 'none';
+}
+
+/**
+ * Ellenfelek számolása a tárcsákon
+ * Az ellenfelek: countess (zöld), bajgunar (sárga), zord (kék)
+ */
+function countEnemiesOnWheels() {
+    let count = 0;
+
+    const greenState = GameState.getWheelState('green');
+    if (greenState && greenState.fieldId === 'countess') count++;
+
+    const yellowState = GameState.getWheelState('yellow');
+    if (yellowState && yellowState.fieldId === 'bajgunar') count++;
+
+    const blueState = GameState.getWheelState('blue');
+    if (blueState && blueState.fieldId === 'zord') count++;
+
+    return count;
+}
+
+/**
  * Oldal megjelenítése
  */
 function showPage(pageId) {
     // Előző auto-play leállítása
     stopAutoPlay();
+
+    // Előző végső timer törlése
+    if (endGameTimeout) {
+        clearTimeout(endGameTimeout);
+        endGameTimeout = null;
+    }
 
     const page = getPage(pageId);
     if (!page) {
@@ -438,37 +776,97 @@ function showPage(pageId) {
     elements.pageNumber.textContent = page.id === 'start' ? 'Kezdés' : page.id.replace('page_', '') + '. oldal';
 
     // Választások beállítása
-    const choiceConfigs = page.choices.map((choice, index) => {
-        const canSelect = canChoose(choice);
-        const choiceAudio = audioData && audioData.choices && audioData.choices[index];
-        return {
-            title: choice.text,
-            description: choice.description || '',
-            disabled: !canSelect,
-            disabledReason: !canSelect ? 'Nincs meg a szükséges tárgy!' : null,
-            audioFile: choiceAudio,
-            action: () => {
-                if (canSelect) {
-                    // Audio leállítása navigáláskor
-                    if (currentAudio) {
-                        currentAudio.pause();
-                        currentAudio = null;
-                    }
-                    const nextPageId = executeChoice(choice);
-                    if (nextPageId) {
-                        showPage(nextPageId);
+    let choiceConfigs;
+
+    // ===== PAGE_7 SPECIÁLIS VÁLASZTÁSOK =====
+    // Az ellenfelek száma alapján csak 1 választás legyen aktív
+    if (pageId === 'page_7') {
+        const enemyCount = countEnemiesOnWheels();
+        console.log('Ellenfelek száma a tárcsákon:', enemyCount);
+
+        choiceConfigs = page.choices.map((choice, index) => {
+            const choiceAudio = audioData && audioData.choices && audioData.choices[index];
+
+            // Melyik választás legyen aktív az ellenfelek száma alapján
+            let canSelect = false;
+            let disabledReason = null;
+
+            if (index === 0) {
+                // "Egyik sem?" - csak ha 0 ellenfél van
+                canSelect = (enemyCount === 0);
+                if (!canSelect) disabledReason = `${enemyCount} ellenfél előzött meg!`;
+            } else if (index === 1) {
+                // "Egy vagy kettő?" - csak ha 1-2 ellenfél van
+                canSelect = (enemyCount >= 1 && enemyCount <= 2);
+                if (!canSelect) disabledReason = enemyCount === 0 ? 'Senki nem előzött meg!' : '3 ellenfél előzött meg!';
+            } else if (index === 2) {
+                // "Három?" - csak ha 3 ellenfél van
+                canSelect = (enemyCount === 3);
+                if (!canSelect) disabledReason = `Csak ${enemyCount} ellenfél előzött meg!`;
+            }
+
+            return {
+                title: choice.text,
+                description: choice.description || '',
+                disabled: !canSelect,
+                disabledReason: disabledReason,
+                audioFile: choiceAudio,
+                action: () => {
+                    if (canSelect) {
+                        if (currentAudio) {
+                            currentAudio.pause();
+                            currentAudio = null;
+                        }
+                        const nextPageId = executeChoice(choice);
+                        if (nextPageId) {
+                            showPage(nextPageId);
+                        }
                     }
                 }
-            }
-        };
-    });
+            };
+        });
+    } else {
+        // Normál választások más oldalakon
+        choiceConfigs = page.choices.map((choice, index) => {
+            const canSelect = canChoose(choice);
+            const choiceAudio = audioData && audioData.choices && audioData.choices[index];
+            return {
+                title: choice.text,
+                description: choice.description || '',
+                disabled: !canSelect,
+                disabledReason: !canSelect ? 'Nincs meg a szükséges tárgy!' : null,
+                audioFile: choiceAudio,
+                action: () => {
+                    if (canSelect) {
+                        // Audio leállítása navigáláskor
+                        if (currentAudio) {
+                            currentAudio.pause();
+                            currentAudio = null;
+                        }
+                        const nextPageId = executeChoice(choice);
+                        if (nextPageId) {
+                            showPage(nextPageId);
+                        }
+                    }
+                }
+            };
+        });
+    }
 
     setChoices(choiceConfigs);
 
     // Auto-play indítása kis késleltetéssel (hogy az UI renderelődjön)
+    // A page_7-nél az autoPlayPageAudio automatikusan kiválasztja az egyetlen aktív opciót
     setTimeout(() => {
         autoPlayPageAudio(pageId);
     }, 300);
+
+    // Ha nincs választás (végső oldal), 20 mp után modal megjelenítése
+    if (page.choices.length === 0) {
+        endGameTimeout = setTimeout(() => {
+            showEndModal();
+        }, 20000);
+    }
 }
 
 /**

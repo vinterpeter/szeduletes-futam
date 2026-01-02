@@ -82,6 +82,28 @@
         </div>
     </div>
 
+    <!-- Játék vége modal -->
+    <div class="modal" id="end-modal" style="display: none;">
+        <div class="modal-content end-modal-content">
+            <h2>Gratulálunk!</h2>
+            <p>Befejezted A Szédületes Futamot!</p>
+            <button onclick="restartGame()">Újrakezdés</button>
+        </div>
+    </div>
+
+    <!-- Újrakezdés megerősítő modal -->
+    <div class="modal" id="restart-modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Újrakezdés</h2>
+            <p>Biztosan újra akarod kezdeni a versenyt?</p>
+            <button onclick="confirmRestart()">Igen, újrakezdés</button>
+            <button onclick="cancelRestart()">Mégse</button>
+        </div>
+    </div>
+
+    <!-- Rejtett újrakezdés gomb -->
+    <button class="restart-btn" id="restart-btn" onclick="showRestartModal()" title="Újrakezdés">↺</button>
+
     <script src="js/gameState.js"></script>
     <script src="js/pages.js"></script>
     <script src="js/game.js"></script>

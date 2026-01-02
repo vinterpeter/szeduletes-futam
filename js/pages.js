@@ -27,7 +27,7 @@ const Pages = {
             },
             {
                 text: 'Ro-Bi és a "Jövő-Menő"',
-                description: 'Az ő zseniális masinkája',
+                description: 'Az ő zseniális masinája',
                 action: { wheel: 'red', value: 'robi' },
                 nextPage: 'page_1'
             },
@@ -1029,16 +1029,373 @@ Végre napfény! És a távolban az égen: Mici grófnő! Legalább a bombákat 
         ]
     },
 
-    // ===== 6. FŐOLDAL (placeholder) =====
+    // ===== 6. FŐOLDAL =====
     'page_6': {
         id: 'page_6',
-        title: '6. főoldal',
-        text: `(Ide jön a 6. főoldal szövege)`,
+        title: 'A híd',
+        image: 'images/scenes/page_6',
+        text: `Elhagyod a sivatagot és már közel a cél. Érzed a tenger illatát, amikor ráhajtasz a hídra. Báj Gúnár, a közönség kedvence tűnik fel a semmiből!
+
+Biztos a győzelmében, ezért diadalmasan mér végig, aztán rád kacsint. Itt az idő, hogy bizonyíts a legyőzhetetlen bajnok ellen.
+
+Hogy akarod ezt megtenni?`,
         choices: [
-            { text: '1. választás', description: '', nextPage: 'page_6_1_1' },
-            { text: '2. választás', description: '', nextPage: 'page_6_2_1' },
-            { text: '3. választás', description: '', nextPage: 'page_6_3_1' }
+            { text: 'Az utolsó pillanatban teljes sebességre kapcsolsz?', description: '', nextPage: 'page_6_1_1' },
+            { text: 'Bármi áron, de lassítod őt?', description: '', nextPage: 'page_6_2_1' },
+            { text: 'Eltereled a figyelmét?', description: '', nextPage: 'page_6_3_1' }
         ]
+    },
+
+    // ----- 6. főoldal, 1. sáv (FELSŐ) -----
+    // Teljes sebesség
+    'page_6_1_1': {
+        id: 'page_6_1_1',
+        title: 'Teljes sebesség',
+        image: 'images/scenes/page_6_1_1',
+        text: `Elrejtve valódi szándékodat, tartod a sebességet, hogy mellette maradj. Azt kell hinnie, hogy ennél már nem tudsz gyorsabban menni…
+
+Nálad van a turbókristály a sárga tárcsán vagy te vezeted a Vörös Villámot?`,
+        choices: [
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Van turbókristályom',
+                condition: { wheel: 'yellow', value: 'turbocrystal' },
+                nextPage: 'page_6_1_2'
+            },
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Samu vagyok a Vörös Villámmal',
+                condition: { wheel: 'red', value: 'samu' },
+                nextPage: 'page_6_1_2'
+            },
+            {
+                text: 'Ha nem, lapozz két oldalt!',
+                description: 'Nincs turbókristályom és nem Vörös Villám',
+                nextPage: 'page_6_1_3'
+            }
+        ]
+    },
+
+    'page_6_1_2': {
+        id: 'page_6_1_2',
+        title: 'Eljött az idő!',
+        image: 'images/scenes/page_6_1_2',
+        text: `Mindketten a hídon száguldotok a reflektorfények felé. Báj szemlátomást nyugodtan szedi rendbe a frizuráját. Vársz még egy kicsit, aztán…
+
+Eljött az idő! A motorod határait feszegeted, és mindent beleadsz. Hatalmas felfordulást okozva hátrahagyod a "bajnokot", aki kissé túlságosan önhitt volt.`,
+        choices: [
+            {
+                text: 'Lapozz két oldalt, hogy áthaladj a célvonalon!',
+                description: '',
+                nextPage: 'page_7'
+            }
+        ]
+    },
+
+    'page_6_1_3': {
+        id: 'page_6_1_3',
+        title: 'Megelőzött!',
+        image: 'images/scenes/page_6_1_3',
+        text: `Nehezen tudod tartani vele a lépést, és kételkedni kezdesz magadban. Veled ellentétben az ellenfeled remekül végzi a dolgát. Az utolsó kilométeren kilő és könnyedén megelőz.
+
+Padlógázt nyomsz, de a motorodból fekete füstgomolyog. Visszaváltasz... gyorsítasz… és majdnem utoléred Bájt, de már túl késő!
+
+<strong>Keresd meg Báj Gúnárt a sárga tárcsán!</strong>`,
+        choices: [
+            {
+                text: 'Lapozz egy oldalt, hogy áthaladj a célvonalon!',
+                description: 'Báj Gúnár megelőzött: 🦆 Báj Gúnár',
+                action: { wheel: 'yellow', value: 'bajgunar' },
+                nextPage: 'page_7'
+            }
+        ]
+    },
+
+    // ----- 6. főoldal, 2. sáv (KÖZÉPSŐ) -----
+    // Lassítás
+    'page_6_2_1': {
+        id: 'page_6_2_1',
+        title: 'Meg kell állítani',
+        image: 'images/scenes/page_6_2_1',
+        text: `Valahogy meg tudod állítani. Az útra koncentrálva számba veszed a lehetőségeidet.
+
+Nálad van a pókháló a sárga tárcsán?`,
+        choices: [
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Van pókhálóm',
+                condition: { wheel: 'yellow', value: 'spiderweb' },
+                nextPage: 'page_6_2_2'
+            },
+            {
+                text: 'Ha nem, lapozz két oldalt!',
+                description: 'Nincs pókhálóm',
+                conditionNot: { wheel: 'yellow', value: 'spiderweb' },
+                nextPage: 'page_6_2_3'
+            }
+        ]
+    },
+
+    'page_6_2_2': {
+        id: 'page_6_2_2',
+        title: 'Pókfonál!',
+        image: 'images/scenes/page_6_2_2',
+        text: `Szorosan rátapadva haladsz a nyomában, egymást előzgetitek a hídon, mielőtt ráhajítod a pókfonalat. "Ezt neked!"
+
+A vastag pókfonál a kerekeire tekeredik. Nem tud megszabadulni tőle, és a versenyautója lelassul.`,
+        choices: [
+            {
+                text: 'Lapozz két oldalt, hogy áthaladj a célvonalon!',
+                description: '',
+                nextPage: 'page_7'
+            }
+        ]
+    },
+
+    'page_6_2_3': {
+        id: 'page_6_2_3',
+        title: 'Kifogytál az ötletekből',
+        image: 'images/scenes/page_6_2_3',
+        text: `Igyekszel magad mögé szorítani, de ő kitakat. Kifogytál az ötletekből, ezért felé hajítasz, amit zsebedben találsz. De ő olyan gyorsan megy, hogy minden lepattan az autójáról.
+
+Ingerülten és megvetéssel telve az ellenfeled rákapcsol, és jól otthagy téged. Tehetetlenül nézed, ahogy elszáguld…
+
+<strong>Keresd meg Báj Gúnárt a sárga tárcsán!</strong>`,
+        choices: [
+            {
+                text: 'Lapozz egy oldalt, hogy áthaladj a célvonalon!',
+                description: 'Báj Gúnár megelőzött: 🦆 Báj Gúnár',
+                action: { wheel: 'yellow', value: 'bajgunar' },
+                nextPage: 'page_7'
+            }
+        ]
+    },
+
+    // ----- 6. főoldal, 3. sáv (ALSÓ) -----
+    // Elterelés
+    'page_6_3_1': {
+        id: 'page_6_3_1',
+        title: 'Elterelés',
+        image: 'images/scenes/page_6_3_1',
+        text: `Jól megnézted magadnak az ellenfeledet. Hogyan tudnád összetörni az egóját? A nézők segítségével?
+
+Veled van a denevér a sárga tárcsán?`,
+        choices: [
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Van denevérem',
+                condition: { wheel: 'yellow', value: 'bat' },
+                nextPage: 'page_6_3_2'
+            },
+            {
+                text: 'Ha nem, lapozz két oldalt!',
+                description: 'Nincs denevérem',
+                conditionNot: { wheel: 'yellow', value: 'bat' },
+                nextPage: 'page_6_3_3'
+            }
+        ]
+    },
+
+    'page_6_3_2': {
+        id: 'page_6_3_2',
+        title: 'Denevér támadás!',
+        image: 'images/scenes/page_6_3_2',
+        text: `Szabadon engeded a kis denevért, aki Báj hajában landol, és vidáman összekócolja, miközben ő éppen magát fotózza a rajongóinak.
+
+A végeredménytől elszörnyedve megpróbál beléd hajtani. De te okosabb vagy nála, bekapcsolod a Jövő-menő propellerét, és könnyedén elkerülöd az ütközést.`,
+        choices: [
+            {
+                text: 'Lapozz két oldalt, hogy áthaladj a célvonalon!',
+                description: '',
+                nextPage: 'page_7'
+            }
+        ]
+    },
+
+    'page_6_3_3': {
+        id: 'page_6_3_3',
+        title: 'Nem sportszerű',
+        image: 'images/scenes/page_6_3_3',
+        text: `Amikor a célegyenest filmező kamerákba beszélsz, a bajnokesélyes vezetési stílusán és megjelenésén viccelődsz. Ez nem túl sportszerű!
+
+Báj nevet, megköszöni a közönség támogatását, majd kenterbe ver.
+
+<strong>Keresd meg Báj Gúnárt a sárga tárcsán!</strong>`,
+        choices: [
+            {
+                text: 'Lapozz egy oldalt, hogy áthaladj a célvonalon!',
+                description: 'Báj Gúnár megelőzött: 🦆 Báj Gúnár',
+                action: { wheel: 'yellow', value: 'bajgunar' },
+                nextPage: 'page_7'
+            }
+        ]
+    },
+
+    // ===== 7. FŐOLDAL =====
+    'page_7': {
+        id: 'page_7',
+        title: 'A célvonal',
+        image: 'images/scenes/page_7',
+        text: `A nézők őrjöngenek. A barátaiddal áthaladtok a célvonalon, és általános taps közepette fejezitek be a versenyt!
+
+A szemed a kupán van, a kezed reszket a kormánykeréken. Eljött az igazság pillanata: elsőként értél célba?
+
+Hány riválisod előzött meg?`,
+        choices: [
+            { text: 'Egyik sem?', description: 'Senki nem előzött meg', nextPage: 'page_7_1_1' },
+            { text: 'Egy vagy kettő?', description: 'Néhányan megelőztek', nextPage: 'page_7_2_1' },
+            { text: 'Három?', description: 'Sokan megelőztek', nextPage: 'page_7_3_1' }
+        ]
+    },
+
+    // ----- 7. főoldal, 1. sáv (FELSŐ) -----
+    // Győzelem
+    'page_7_1_1': {
+        id: 'page_7_1_1',
+        title: 'Győzelem!',
+        image: 'images/scenes/page_7_1_1',
+        text: `Hihetetlen! Bizonyítottad bátorságodat, ravaszságodat és ügyességedet. Megnyerted a versenyt!
+
+Te vagy Ro-bi?`,
+        choices: [
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Ro-bi vagyok',
+                condition: { wheel: 'red', value: 'robi' },
+                nextPage: 'page_7_1_2'
+            },
+            {
+                text: 'Ha nem, lapozz két oldalt!',
+                description: 'Nem Ro-bi vagyok',
+                conditionNot: { wheel: 'red', value: 'robi' },
+                nextPage: 'page_7_1_3'
+            }
+        ]
+    },
+
+    'page_7_1_2': {
+        id: 'page_7_1_2',
+        title: 'Űrverseny!',
+        image: 'images/scenes/page_7_1_2',
+        text: `Senkinek nem említetted, de ez a kupa kellett ahhoz, hogy továbbfejleszd a Jövő-menődet!
+
+Néhány perc komoly szerelés után a tömeg csodálkozva nézi, ahogy az Ultra-jövő-menőd elhagyja a légkört.
+
+Csodálatos, a következő versenyed az űrben lesz!
+
+<strong>VÉGE</strong>`,
+        choices: []
+    },
+
+    'page_7_1_3': {
+        id: 'page_7_1_3',
+        title: 'A közönség kedvence!',
+        image: 'images/scenes/page_7_1_3',
+        text: `A nézők megőrülnek érted, ez életed legszebb pillanata! Egy titokzatos férfi utat tör magának a tömegben, és odalép hozzád…
+
+Egy meghívót nyújt át neked a következő szezon új versenyére!
+
+Szép munka, te vagy a közönség új kedvence!
+
+<strong>VÉGE</strong>`,
+        choices: []
+    },
+
+    // ----- 7. főoldal, 2. sáv (KÖZÉPSŐ) -----
+    // Majdnem sikerült
+    'page_7_2_1': {
+        id: 'page_7_2_1',
+        title: 'Majdnem sikerült!',
+        image: 'images/scenes/page_7_2_1',
+        text: `Bár többen utánad értek be, egy-két versenyző megelőzött. Ezúttal majdnem sikerült!
+
+Nálad van a csúzli a zöld tárcsán?`,
+        choices: [
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Van csúzlim',
+                condition: { wheel: 'green', value: 'slingshot' },
+                nextPage: 'page_7_2_2'
+            },
+            {
+                text: 'Ha nem, lapozz két oldalt!',
+                description: 'Nincs csúzlim',
+                conditionNot: { wheel: 'green', value: 'slingshot' },
+                nextPage: 'page_7_2_3'
+            }
+        ]
+    },
+
+    'page_7_2_2': {
+        id: 'page_7_2_2',
+        title: 'Kizárva!',
+        image: 'images/scenes/page_7_2_2',
+        text: `Ahogy a dobogó felé haladsz, a bíró csurom vizesen keresztülvág a tömegen…
+
+A közönség fújolása ellenére kizár téged a versenyből. Ha te lettél volna az első, ezt biztos nem meri megtenni!
+
+De túl nagy volt a kísértés, hogy vízbe lökd…
+
+<strong>VÉGE</strong>`,
+        choices: []
+    },
+
+    'page_7_2_3': {
+        id: 'page_7_2_3',
+        title: 'Dobogós hely!',
+        image: 'images/scenes/page_7_2_3',
+        text: `Úgy tűnik, a dobogó legfelső fokán a riválisok megkérdőjelezik a bíró döntését a győztest illetően…
+
+Mindegy, a lényeg, hogy felkerültél a dobogóra és jól szórakoztál!
+
+Egy visszavágó?
+
+<strong>VÉGE</strong>`,
+        choices: []
+    },
+
+    // ----- 7. főoldal, 3. sáv (ALSÓ) -----
+    // Vereség
+    'page_7_3_1': {
+        id: 'page_7_3_1',
+        title: 'Nem nyertél',
+        image: 'images/scenes/page_7_3_1',
+        text: `Sajnos mire megérkezel, már mindenki a győzteseknek gratulál. Ne búsulj, azért jól szórakoztál!`,
+        choices: [
+            {
+                text: 'Lapozz egy oldalt, hogy bátorítsd a többi versenyzőt!',
+                description: '',
+                nextPage: 'page_7_3_2'
+            }
+        ]
+    },
+
+    'page_7_3_2': {
+        id: 'page_7_3_2',
+        title: 'Bátorítás',
+        image: 'images/scenes/page_7_3_2',
+        text: `Éljenzed a többi versenyzőt, akik most érnek célba.`,
+        choices: [
+            {
+                text: 'Lapozz egy oldalt, hogy megvárd az utolsónak beérkezőt!',
+                description: '',
+                nextPage: 'page_7_3_3'
+            }
+        ]
+    },
+
+    'page_7_3_3': {
+        id: 'page_7_3_3',
+        title: 'Legalább beértél!',
+        image: 'images/scenes/page_7_3_3',
+        text: `Egyeseknek ez jobban megy, mint másoknak…
+
+Te legalább még sötétedés előtt célba értél!
+
+Na nyomás, kezdj el újra edzeni.
+
+<strong>VÉGE</strong>`,
+        choices: []
     },
 
     // Példa feltételes oldalra

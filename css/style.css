@@ -552,3 +552,40 @@ body {
         font-size: 11px;
     }
 }
+
+/* Újrakezdés gomb - diszkrét, jobb felső sarokban */
+.restart-btn {
+    position: fixed;
+    top: 15px;
+    right: 115px; /* A sárga tárcsa (100px) mellett */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 250; /* A tárcsák (200) fölött */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.restart-btn:hover {
+    background: rgba(255, 215, 0, 0.2);
+    color: #FFD700;
+    border-color: rgba(255, 215, 0, 0.5);
+    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+    .restart-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        top: 10px;
+        right: 75px; /* A kisebb tárcsa (60px) mellett */
+    }
+}

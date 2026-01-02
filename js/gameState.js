@@ -41,10 +41,10 @@ const GameState = {
             // Mezők a tárcsán - a könyvből
             fields: [
                 { id: 'empty', name: 'Üres', icon: 'images/icons/empty.svg' },
-                { id: 'rope', name: 'Kötél és mászóhorog', icon: 'images/icons/rope.svg' },
-                { id: 'balloons', name: 'Lufik', icon: 'images/icons/balloons.svg' },
-                { id: 'slingshot', name: 'Csúzli', icon: 'images/icons/slingshot.svg' },
-                { id: 'countess', name: 'Verecky grófnő', icon: 'images/icons/countess.svg' }
+                { id: 'rope', name: 'Kötél és mászóhorog', icon: 'images/icons/rope.png' },
+                { id: 'balloons', name: 'Lufik', icon: 'images/icons/balloons.png' },
+                { id: 'slingshot', name: 'Csúzli', icon: 'images/icons/slingshot.png' },
+                { id: 'countess', name: 'Verecky grófnő', icon: 'images/icons/countess.png' }
             ]
         },
         YELLOW: {
@@ -54,10 +54,10 @@ const GameState = {
             position: 'top-right',
             fields: [
                 { id: 'empty', name: 'Üres', icon: 'images/icons/empty.svg' },
-                { id: 'bat', name: 'Denevér', icon: 'images/icons/bat.svg' },
-                { id: 'spiderweb', name: 'Pókhálófonal', icon: 'images/icons/spiderweb.svg' },
-                { id: 'turbocrystal', name: 'Turbókristály', icon: 'images/icons/turbocrystal.svg' },
-                { id: 'bajgunar', name: 'Báj Gúnár', icon: 'images/icons/bajgunar.svg' }
+                { id: 'bat', name: 'Denevér', icon: 'images/icons/bat.png' },
+                { id: 'spiderweb', name: 'Pókhálófonal', icon: 'images/icons/spiderweb.png' },
+                { id: 'turbocrystal', name: 'Turbókristály', icon: 'images/icons/turbocrystal.png' },
+                { id: 'bajgunar', name: 'Báj Gúnár', icon: 'images/icons/bajgunar.png' }
             ]
         },
         BLUE: {
@@ -67,10 +67,10 @@ const GameState = {
             position: 'bottom-left',
             fields: [
                 { id: 'empty', name: 'Üres', icon: 'images/icons/empty.svg' },
-                { id: 'goldenegg', name: 'Aranytojás', icon: 'images/icons/goldenegg.svg' },
-                { id: 'helena', name: 'Helána', icon: 'images/icons/helena.svg' },
-                { id: 'offroadtire', name: 'Terepgumi', icon: 'images/icons/offroadtire.svg' },
-                { id: 'zord', name: 'Zord', icon: 'images/icons/zord.svg' }
+                { id: 'goldenegg', name: 'Aranytojás', icon: 'images/icons/goldenegg.png' },
+                { id: 'helena', name: 'Helána', icon: 'images/icons/helena.png' },
+                { id: 'offroadtire', name: 'Terepgumi', icon: 'images/icons/offroadtire.png' },
+                { id: 'zord', name: 'Zord', icon: 'images/icons/zord.png' }
             ]
         },
         RED: {
@@ -79,9 +79,9 @@ const GameState = {
             color: '#F44336',
             position: 'bottom-right',
             fields: [
-                { id: 'panka', name: 'Panka Tanka', icon: 'images/icons/panka.svg' },
-                { id: 'robi', name: 'Ro-Bi Jövő-Menő', icon: 'images/icons/robi.svg' },
-                { id: 'samu', name: 'Samu Vörös Villám', icon: 'images/icons/samu.svg' }
+                { id: 'panka', name: 'Panka Tanka', icon: 'images/icons/panka.png' },
+                { id: 'robi', name: 'Ro-Bi Jövő-Menő', icon: 'images/icons/robi.png' },
+                { id: 'samu', name: 'Samu Vörös Villám', icon: 'images/icons/samu.png' }
             ]
         }
     },
