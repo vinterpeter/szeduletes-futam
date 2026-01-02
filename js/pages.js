@@ -430,15 +430,614 @@ De túlságosan nagy, és a tárnába szorul. Az elzárt járat azt jelenti, hog
         ]
     },
 
-    // ===== 3. FŐOLDAL (placeholder) =====
+    // ===== 3. FŐOLDAL =====
     'page_3': {
         id: 'page_3',
-        title: '3. főoldal',
-        text: `(Ide jön a 3. főoldal szövege)`,
+        title: 'A vulkán',
+        image: 'images/scenes/page_3',
+        text: `Ahogy egyre mélyebbre hatolsz a hegyben, nő a hőmérséklet. Nem véletlenül, ugyanis egy vulkán közepe felé tartasz.
+
+Egyre kevesebb versenyzőt látsz, néhányan komoly bajban vannak, mások már fel is adták a versenyt. Kissé megnyugodhatsz…
+
+Mit akarsz csinálni?`,
         choices: [
-            { text: '1. választás', description: '', nextPage: 'page_3_1_1' },
-            { text: '2. választás', description: '', nextPage: 'page_3_2_1' },
-            { text: '3. választás', description: '', nextPage: 'page_3_3_1' }
+            { text: 'A lehető legkevesebbet kockáztatva a boxutcán haladsz át?', description: '', nextPage: 'page_3_1_1' },
+            { text: 'A magma közelébe merészkedsz?', description: '', nextPage: 'page_3_2_1' },
+            { text: 'Továbbmégy és megnézed a balesetet?', description: '', nextPage: 'page_3_3_1' }
+        ]
+    },
+
+    // ----- 3. főoldal, 1. sáv (FELSŐ) -----
+    // Boxutca
+    'page_3_1_1': {
+        id: 'page_3_1_1',
+        title: 'A boxutca',
+        image: 'images/scenes/page_3_1_1',
+        text: `A járatból kirobbanva kissé nagyobb sebességgel érkezel. Szerelőket és autóalkatrészeket veszel észre egy sík területen.
+
+Samu vagy a Vörös Villámmal?`,
+        choices: [
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Samu vagyok',
+                condition: { wheel: 'red', value: 'samu' },
+                nextPage: 'page_3_1_2'
+            },
+            {
+                text: 'Ha nem, lapozz két oldalt!',
+                description: 'Nem Samu vagyok',
+                conditionNot: { wheel: 'red', value: 'samu' },
+                nextPage: 'page_3_1_3'
+            }
+        ]
+    },
+
+    'page_3_1_2': {
+        id: 'page_3_1_2',
+        title: 'Teljes gázzal!',
+        image: 'images/scenes/page_3_1_2',
+        text: `A sebességkorlátozó táblákon levő számok olyan alacsonyak, hogy fel sincsenek rajzolva a Vörös Villám sebességmérőjén.
+
+Teljes gázzal haladva lehagyod a versenyzőket, akik megálltak, és pillanatok alatt eléred a kijáratot.`,
+        choices: [
+            {
+                text: 'Lapozz két oldalt, és folytasd a versenyt!',
+                description: '',
+                nextPage: 'page_4'
+            }
+        ]
+    },
+
+    'page_3_1_3': {
+        id: 'page_3_1_3',
+        title: 'Tuning',
+        image: 'images/scenes/page_3_1_3',
+        text: `Ismered a járműved erősségeit és gyengéit, ezért úgy döntesz, megállsz egy pillanatra és megnézed a tuningcuccokat…
+
+A szerelők átvizsgálják a kocsidat. Három fúrás, egy csinos kis számla és a kocsid jobb, mint korábban… egy kis extrával.
+
+<strong>Keresd meg a terepgumikat a kék tárcsán!</strong>`,
+        choices: [
+            {
+                text: 'Lapozz egy oldalt, és folytasd a versenyt!',
+                description: 'Megszerezted: 🛞 Terepgumik',
+                action: { wheel: 'blue', value: 'offroadtire' },
+                nextPage: 'page_4'
+            }
+        ]
+    },
+
+    // ----- 3. főoldal, 2. sáv (KÖZÉPSŐ) -----
+    // Magma
+    'page_3_2_1': {
+        id: 'page_3_2_1',
+        title: 'A lávafolyó',
+        image: 'images/scenes/page_3_2_1',
+        text: `A láva bugyogva tör fel a vulkánból és hullámokban lepi el az utat. Egy aranytojás kelti fel a figyelmedet, ami mintha egy oltáron ülne.
+
+Samu vagy a Vörös Villámmal?`,
+        choices: [
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Samu vagyok',
+                condition: { wheel: 'red', value: 'samu' },
+                nextPage: 'page_3_2_2'
+            },
+            {
+                text: 'Ha nem, lapozz két oldalt!',
+                description: 'Nem Samu vagyok',
+                conditionNot: { wheel: 'red', value: 'samu' },
+                nextPage: 'page_3_2_3'
+            }
+        ]
+    },
+
+    'page_3_2_2': {
+        id: 'page_3_2_2',
+        title: 'Aranytojás!',
+        image: 'images/scenes/page_3_2_2',
+        text: `Jól ismered a kocsidat és tudod, hogy hiába ijesztő a láva, biztonságosan tudsz száguldani. Csak tartsd az irányt. Egyébként a Vörös Villám oldalára festett lángok úgyis megvédenek bármitől.
+
+Akkora előnyben vagy, hogy még azt is megnézheted, ahogy a riválisaidnak megég a hátsója. És a hatalmas aranytojás csak tiéd!
+
+<strong>Keresd meg a hatalmas aranytojást a kék tárcsán!</strong>`,
+        choices: [
+            {
+                text: 'Lapozz két oldalt, és folytasd a versenyt!',
+                description: 'Megszerezted: 🥚 Aranytojás',
+                action: { wheel: 'blue', value: 'goldenegg' },
+                nextPage: 'page_4'
+            }
+        ]
+    },
+
+    'page_3_2_3': {
+        id: 'page_3_2_3',
+        title: 'Veszélyes láva',
+        image: 'images/scenes/page_3_2_3',
+        text: `Vállalod a kockázatot, de a helyzet korántsem könnyű… Hatalmas erőfeszítéseket kell tenned, hogy a láva ne eméssze el a kocsidat.
+
+A többi versenyző megelőz, mire eléred a terem közepét. Nincs aranytojás, de gondolkodni sincs időd ezen. Gyorsan távozol.`,
+        choices: [
+            {
+                text: 'Lapozz egy oldalt, és folytasd a versenyt!',
+                description: '',
+                nextPage: 'page_4'
+            }
+        ]
+    },
+
+    // ----- 3. főoldal, 3. sáv (ALSÓ) -----
+    // Baleset
+    'page_3_3_1': {
+        id: 'page_3_3_1',
+        title: 'A baleset',
+        image: 'images/scenes/page_3_3_1',
+        text: `A balesethez közeledve látod, hogy a pilóta kétségbeesetten lenget egy zsebkendőt. Vajon ez csapda?
+
+Megállsz, hogy segíts szegény sofőrnek?`,
+        choices: [
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Segítek neki',
+                nextPage: 'page_3_3_2'
+            },
+            {
+                text: 'Ha inkább megszabadulnál tőle, lapozz két oldalt!',
+                description: 'Továbbhajtok',
+                nextPage: 'page_3_3_3'
+            }
+        ]
+    },
+
+    'page_3_3_2': {
+        id: 'page_3_3_2',
+        title: 'Heléna',
+        image: 'images/scenes/page_3_3_2',
+        text: `Helénaként mutatkozik be: archeológus és kalandor, aki megígéri, hogy hálája jeléül segít neked a verseny további részében.
+
+Megfogja a kezed, beszáll a járműbe és melléd huppan. Két embernek elég szűkös a hely, de boldogultok.
+
+<strong>Keresd meg Helénát, a kalandort a kék tárcsán!</strong>`,
+        choices: [
+            {
+                text: 'Lapozz két oldalt, és folytasd a versenyt!',
+                description: 'Megszerezted: 👩‍🦰 Heléna',
+                action: { wheel: 'blue', value: 'helena' },
+                nextPage: 'page_4'
+            }
+        ]
+    },
+
+    'page_3_3_3': {
+        id: 'page_3_3_3',
+        title: 'Lávába lökés',
+        image: 'images/scenes/page_3_3_3',
+        text: `Nem tudod megállni, látnod kell, ahogy a kocsi elolvad a lávában. És tessék, csak egy kis lökés kellett neki, és már lángol is!
+
+Megérte, nem is kérdés. Ráadásul így egy riválissal kevesebb. Megkönnyebbülten folytatod a versenyt.`,
+        choices: [
+            {
+                text: 'Lapozz egy oldalt, és folytasd a versenyt!',
+                description: '',
+                nextPage: 'page_4'
+            }
+        ]
+    },
+
+    // ===== 4. FŐOLDAL =====
+    'page_4': {
+        id: 'page_4',
+        title: 'A dzsungel',
+        image: 'images/scenes/page_4',
+        text: `Kiérsz a vulkánból, egy pillanatra elvakít a fény, de máris egy dzsungelben találod magad!
+
+Hirtelen megjelenik egy ellenfeled, Zord, és harcra készen üldözőbe vesz.
+
+Hogyan akarsz megszabadulni tőle?`,
+        choices: [
+            { text: 'Lerázod a templomban?', description: '', nextPage: 'page_4_1_1' },
+            { text: 'Átkelsz a Változó Mocsarakon?', description: '', nextPage: 'page_4_2_1' },
+            { text: 'Felkelted a pteroszaurusz mama figyelmét?', description: '', nextPage: 'page_4_3_1' }
+        ]
+    },
+
+    // ----- 4. főoldal, 1. sáv (FELSŐ) -----
+    // Templom
+    'page_4_1_1': {
+        id: 'page_4_1_1',
+        title: 'A templom',
+        image: 'images/scenes/page_4_1_1',
+        text: `Átvágsz a sűrű növényzeten a titokzatos templomba. Zord a sarkadban van, de úgy tűnik, tétovázik. Az a hír járja, hogy ez a hely el van átkozva.
+
+Veled van Heléna, a kalandor a kék tárcsán?`,
+        choices: [
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Heléna velem van',
+                condition: { wheel: 'blue', value: 'helena' },
+                nextPage: 'page_4_1_2'
+            },
+            {
+                text: 'Ha nem, lapozz két oldalt!',
+                description: 'Nincs velem Heléna',
+                conditionNot: { wheel: 'blue', value: 'helena' },
+                nextPage: 'page_4_1_3'
+            }
+        ]
+    },
+
+    'page_4_1_2': {
+        id: 'page_4_1_2',
+        title: 'Heléna segít!',
+        image: 'images/scenes/page_4_1_2',
+        text: `Odabent kissé bonyolultnak tűnik a dolog… Szerencsére Heléna úgy ismeri a helyet, mint a tenyerét.
+
+Zord az öklével a földet veri, miközben már a sarkadban liheg. Hála a segítőtársadnak, épp a kijáratnál sikerül csapdába csalni őt.`,
+        choices: [
+            {
+                text: 'Lapozz két oldalt, és folytasd a versenyt!',
+                description: '',
+                nextPage: 'page_5'
+            }
+        ]
+    },
+
+    'page_4_1_3': {
+        id: 'page_4_1_3',
+        title: 'Eltévedtél!',
+        image: 'images/scenes/page_4_1_3',
+        text: `Odabent teljesen kilátástalanná válik a helyzet. Innen lehetetlen kitalálni. Ráadásul Zord dühös üvöltése is rád hozza a frászt.
+
+Leállítod a motort, és veszel egy nagy levegőt. Egy kis idő után Zord már messze jár. De jóval előtted.
+
+<strong>Keresd meg Zordot a kék tárcsán!</strong>`,
+        choices: [
+            {
+                text: 'Lapozz egy oldalt, és folytasd a versenyt!',
+                description: 'Zord megelőzött: 👹 Zord',
+                action: { wheel: 'blue', value: 'zord' },
+                nextPage: 'page_5'
+            }
+        ]
+    },
+
+    // ----- 4. főoldal, 2. sáv (KÖZÉPSŐ) -----
+    // Mocsár
+    'page_4_2_1': {
+        id: 'page_4_2_1',
+        title: 'A mocsár',
+        image: 'images/scenes/page_4_2_1',
+        text: `Azt reméled, hogy le tudod lassítani az ellenfeledet, akinek a kocsija nehezebb a tiédnél. Egy kis szerencsével a dzsungel nedves talaja megteszi, amit kell.
+
+Terepgumik vannak a kocsidon a kék tárcsán?`,
+        choices: [
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Van terepgumim',
+                condition: { wheel: 'blue', value: 'offroadtire' },
+                nextPage: 'page_4_2_2'
+            },
+            {
+                text: 'Ha nem, lapozz két oldalt!',
+                description: 'Nincs terepgumim',
+                conditionNot: { wheel: 'blue', value: 'offroadtire' },
+                nextPage: 'page_4_2_3'
+            }
+        ]
+    },
+
+    'page_4_2_2': {
+        id: 'page_4_2_2',
+        title: 'Terepgumik!',
+        image: 'images/scenes/page_4_2_2',
+        text: `Megjelenik Zord, kidönt néhány fát, és rád akar ijeszteni.
+
+A gumijaid csodákat művelnek a sárban. Amikor végül Zord gigantikus kerekei elakadnak, ugrálsz örömödben!`,
+        choices: [
+            {
+                text: 'Lapozz két oldalt, és folytasd a versenyt!',
+                description: '',
+                nextPage: 'page_5'
+            }
+        ]
+    },
+
+    'page_4_2_3': {
+        id: 'page_4_2_3',
+        title: 'Elakadtál!',
+        image: 'images/scenes/page_4_2_3',
+        text: `Sajnos a puha, ragacsos sár megfogja a kerekeidet, és hirtelen teljesen elakadsz.
+
+Zord hatalmasat fékez. Hangosan nevet, amikor meglát, majd a gázra tapos. Mire kiérsz a dzsungelből, már jóval előtted jár.
+
+<strong>Keresd meg Zordot a kék tárcsán!</strong>`,
+        choices: [
+            {
+                text: 'Lapozz egy oldalt, és folytasd a versenyt!',
+                description: 'Zord megelőzött: 👹 Zord',
+                action: { wheel: 'blue', value: 'zord' },
+                nextPage: 'page_5'
+            }
+        ]
+    },
+
+    // ----- 4. főoldal, 3. sáv (ALSÓ) -----
+    // Pteroszaurusz
+    'page_4_3_1': {
+        id: 'page_4_3_1',
+        title: 'A pteroszaurusz',
+        image: 'images/scenes/page_4_3_1',
+        text: `A visszapillantó tükröddel a napfényt a lény felé irányítod, hogy felébreszd őt. Felszáll a fészkéről, és lecsap az irányodba.
+
+Nálad van a tojás a kék tárcsán?`,
+        choices: [
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Van aranytojásom',
+                condition: { wheel: 'blue', value: 'goldenegg' },
+                nextPage: 'page_4_3_2'
+            },
+            {
+                text: 'Ha nem, lapozz két oldalt!',
+                description: 'Nincs aranytojásom',
+                conditionNot: { wheel: 'blue', value: 'goldenegg' },
+                nextPage: 'page_4_3_3'
+            }
+        ]
+    },
+
+    'page_4_3_2': {
+        id: 'page_4_3_2',
+        title: 'Kapd el!',
+        image: 'images/scenes/page_4_3_2',
+        text: `A hatalmas szárnyasgyík egyre közelebb ér, és Zord próbál megragadni téged, hogy nehéz helyzetbe hozzon. Odadobod neki az aranytojást: "Kapd el!"
+
+Zavartan elkapja a felé repülő tárgyat, de túl későn kap észbe. A dühös pteroszaurusz felemeli őt az égbe. Végre megszabadultál tőle!`,
+        choices: [
+            {
+                text: 'Lapozz két oldalt, és folytasd a versenyt!',
+                description: '',
+                nextPage: 'page_5'
+            }
+        ]
+    },
+
+    'page_4_3_3': {
+        id: 'page_4_3_3',
+        title: 'Elkapott!',
+        image: 'images/scenes/page_4_3_3',
+        text: `Zord üvöltése eléri a kívánt hatást. Mivel te kevésbé tűnsz fenyegetőnek, a hatalmas hüllő rád csap le! Rémlik, hogy volt egy terved, de jaj, mi is lehetett az?
+
+Elkap, a magasba emel, majd valahol a dzsungel mélyén ereszt el. A zuhanásod felfogja a vastag növényzet, de mire megtalálod a kiutat, Zord már messze jár.
+
+<strong>Keresd meg Zordot a kék tárcsán!</strong>`,
+        choices: [
+            {
+                text: 'Lapozz egy oldalt, és folytasd a versenyt!',
+                description: 'Zord megelőzött: 👹 Zord',
+                action: { wheel: 'blue', value: 'zord' },
+                nextPage: 'page_5'
+            }
+        ]
+    },
+
+    // ===== 5. FŐOLDAL =====
+    'page_5': {
+        id: 'page_5',
+        title: 'A kanyon',
+        image: 'images/scenes/page_5',
+        text: `A mocsarat magad mögött hagyod és eléred a kanyont. Veled szemben Verecky Mici grófnő lebeg ráérősen, a sziklákkal mit sem törődve.
+
+A léghajója korlátján áthajolva bombákat hajigál az útra és gúnyos megjegyzéseket tesz.
+
+Mit akarsz tenni?`,
+        choices: [
+            { text: 'Megtámadod a léghajót?', description: '', nextPage: 'page_5_1_1' },
+            { text: 'A robbanások fölé ugratsz?', description: '', nextPage: 'page_5_2_1' },
+            { text: 'Menedéket keresel az alagútban?', description: '', nextPage: 'page_5_3_1' }
+        ]
+    },
+
+    // ----- 5. főoldal, 1. sáv (FELSŐ) -----
+    // Léghajó támadás
+    'page_5_1_1': {
+        id: 'page_5_1_1',
+        title: 'A léghajó',
+        image: 'images/scenes/page_5_1_1',
+        text: `Hogy bosszút állj rajta, kiszúrhatnád a fránya léggömbjét! Körbenézel valami hegyes után kutatva…
+
+Nálad van a csúzli a zöld tárcsán vagy a Tankát vezeted?`,
+        choices: [
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Van csúzlim vagy Tanka vagyok',
+                condition: { wheel: 'green', value: 'slingshot' },
+                nextPage: 'page_5_1_2'
+            },
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Panka vagyok a Tankával',
+                condition: { wheel: 'red', value: 'panka' },
+                nextPage: 'page_5_1_2'
+            },
+            {
+                text: 'Ha nem, lapozz két oldalt!',
+                description: 'Nincs csúzlim és nem Tanka',
+                nextPage: 'page_5_1_3'
+            }
+        ]
+    },
+
+    'page_5_1_2': {
+        id: 'page_5_1_2',
+        title: 'Tökéletes lövés!',
+        image: 'images/scenes/page_5_1_2',
+        text: `Benedvesített ujjadat a levegőbe tartod, és megnézed a szél irányát és sebességét, majd kiszámolod a megfelelő szöget. Célba veszed a léggömböt egy kaktusszal és…
+
+Tökéletes lövés! A tüskék átszúrják a léghajót, ami ereszt, mint egy lyukas vödör és közben furcsa hangot ad ki.`,
+        choices: [
+            {
+                text: 'Lapozz két oldalt, hogy megőrizd a lendületed!',
+                description: '',
+                nextPage: 'page_6'
+            }
+        ]
+    },
+
+    'page_5_1_3': {
+        id: 'page_5_1_3',
+        title: 'Túl messze!',
+        image: 'images/scenes/page_5_1_3',
+        text: `Ez a kaktusz majd elvégzi a dolgát. Elhajítod, amilyen erősen csak tudod a forró sivatagi széllel szemben. De… nehezebb, mint gondoltad. És még az ujjaid is belesajdulnak!
+
+A grófnő a látóhatáron túlságosan messze van.
+
+<strong>Keresd meg Verecky grófnőt a zöld tárcsán!</strong>`,
+        choices: [
+            {
+                text: 'Lapozz egy oldalt, hogy visszacsatlakozz a versenybe!',
+                description: 'A grófnő megelőzött: 👸 Grófnő',
+                action: { wheel: 'green', value: 'countess' },
+                nextPage: 'page_6'
+            }
+        ]
+    },
+
+    // ----- 5. főoldal, 2. sáv (KÖZÉPSŐ) -----
+    // Ugrás a robbanások fölé
+    'page_5_2_1': {
+        id: 'page_5_2_1',
+        title: 'A rámpa',
+        image: 'images/scenes/page_5_2_1',
+        text: `Tövig nyomva a gázpedált a rámpa felé hajtasz. Csuriban vannak az ujjaid, és…
+
+Nálad vannak a lufik a zöld tárcsán vagy a Jövő-Menőt vezeted?`,
+        choices: [
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Vannak lufijaim',
+                condition: { wheel: 'green', value: 'balloons' },
+                nextPage: 'page_5_2_2'
+            },
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Ro-Bi vagyok a Jövő-Menővel',
+                condition: { wheel: 'red', value: 'robi' },
+                nextPage: 'page_5_2_2'
+            },
+            {
+                text: 'Ha nem, lapozz két oldalt!',
+                description: 'Nincs lufim és nem Jövő-Menő',
+                nextPage: 'page_5_2_3'
+            }
+        ]
+    },
+
+    'page_5_2_2': {
+        id: 'page_5_2_2',
+        title: 'Repülés!',
+        image: 'images/scenes/page_5_2_2',
+        text: `… repülsz! A robbanások ereje segít magasabbra emelkedni, a szél pedig tovarepít.
+
+Lehagyod a grófnőt, és elmenekülsz a gonosz kis trükkjei elől. Jobban tette volna, ha inkább a versenyre koncentrál!`,
+        choices: [
+            {
+                text: 'Lapozz két oldalt, hogy megőrizd a lendületed!',
+                description: '',
+                nextPage: 'page_6'
+            }
+        ]
+    },
+
+    'page_5_2_3': {
+        id: 'page_5_2_3',
+        title: 'Zuhanás!',
+        image: 'images/scenes/page_5_2_3',
+        text: `A levegőbe emelkedsz! Néhány kellemes másodpercig repülsz, de semmi sem tart örökké, és a kanyon mélyére zuhansz.
+
+Miután összeszeded magad, ismét csak a sivatagi szél fütyülését hallod. Ami Verecky Micit illeti, ő már messze jár…
+
+<strong>Keresd meg Verecky grófnőt a zöld tárcsán!</strong>`,
+        choices: [
+            {
+                text: 'Lapozz egy oldalt, hogy visszacsatlakozz a versenybe!',
+                description: 'A grófnő megelőzött: 👸 Grófnő',
+                action: { wheel: 'green', value: 'countess' },
+                nextPage: 'page_6'
+            }
+        ]
+    },
+
+    // ----- 5. főoldal, 3. sáv (ALSÓ) -----
+    // Alagút / vasút
+    'page_5_3_1': {
+        id: 'page_5_3_1',
+        title: 'A vasúti sín',
+        image: 'images/scenes/page_5_3_1',
+        text: `Jaj, ne… a vasúti sín nem volt a legjobb ötlet! És még a vonat is jön!
+
+Nálad van a mászókötél a zöld tárcsán?`,
+        choices: [
+            {
+                text: 'Ha igen, lapozz egy oldalt!',
+                description: 'Van mászókötelem',
+                condition: { wheel: 'green', value: 'rope' },
+                nextPage: 'page_5_3_2'
+            },
+            {
+                text: 'Ha nem, lapozz két oldalt!',
+                description: 'Nincs mászókötelem',
+                conditionNot: { wheel: 'green', value: 'rope' },
+                nextPage: 'page_5_3_3'
+            }
+        ]
+    },
+
+    'page_5_3_2': {
+        id: 'page_5_3_2',
+        title: 'Sínen vagy!',
+        image: 'images/scenes/page_5_3_2',
+        text: `Valami eszedbe jutott! Egy próbálkozás, majd még egy, és máris sínen vagy… a mozdonyra kapaszkodva!
+
+Könnyedén magad mögött hagyod a kanyont! Amikor hátra nézel, a grófnő már csak egy apró pont az égen.`,
+        choices: [
+            {
+                text: 'Lapozz két oldalt, hogy megőrizd a lendületed!',
+                description: '',
+                nextPage: 'page_6'
+            }
+        ]
+    },
+
+    'page_5_3_3': {
+        id: 'page_5_3_3',
+        title: 'Lemaradtál!',
+        image: 'images/scenes/page_5_3_3',
+        text: `A vonat gyorsan elrobog, és te ismét magadra maradsz. Az út hepehupás, és fájó alfeled azt súgja, hogy jobb lengéscsillapítókat kellene beszerezned.
+
+Végre napfény! És a távolban az égen: Mici grófnő! Legalább a bombákat elkerülted…
+
+<strong>Keresd meg Verecky grófnőt a zöld tárcsán!</strong>`,
+        choices: [
+            {
+                text: 'Lapozz egy oldalt, hogy visszacsatlakozz a versenybe!',
+                description: 'A grófnő megelőzött: 👸 Grófnő',
+                action: { wheel: 'green', value: 'countess' },
+                nextPage: 'page_6'
+            }
+        ]
+    },
+
+    // ===== 6. FŐOLDAL (placeholder) =====
+    'page_6': {
+        id: 'page_6',
+        title: '6. főoldal',
+        text: `(Ide jön a 6. főoldal szövege)`,
+        choices: [
+            { text: '1. választás', description: '', nextPage: 'page_6_1_1' },
+            { text: '2. választás', description: '', nextPage: 'page_6_2_1' },
+            { text: '3. választás', description: '', nextPage: 'page_6_3_1' }
         ]
     },
 
