@@ -484,11 +484,13 @@ async function autoPlayPageAudio(pageId) {
             if (singleChoice.audio && !signal.aborted) {
                 await playAudioWithFeedback(singleChoice.audio, singleChoice.element, signal);
             }
-            // Automatikus kiválasztás
+            // Automatikus kiválasztás - hosszabb várakozás a vég oldalakon
             if (!signal.aborted) {
+                const isEndingPage = pageId.startsWith('page_7');
+                const delay = isEndingPage ? 3000 : 500;
                 setTimeout(() => {
                     singleChoice.element.click();
-                }, 500);
+                }, delay);
             }
             return;
         }
